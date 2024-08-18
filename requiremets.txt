@@ -1,4 +1,4 @@
 streamlit
 pandas
 numpy
-numpy_financial
+pip install git+https://github.com/numpy/numpy-financial.git
