@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
-import numpy_financial as npf
 import numpy as np
+from numpy import numpy_financial as npf
 
 # Instruções iniciais
 st.title("Análise de Fluxo de Caixa para Alternativas de Investimento - Engenharia Econômica")
