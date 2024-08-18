@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-#import numpy_financial as npf
+import numpy_financial as npf
 import numpy as np
 
 # Instruções iniciais
@@ -110,12 +110,12 @@ def compare_alternatives(tir_a, vpl_a, payback_a, tir_b, vpl_b, payback_b):
     return pd.DataFrame(data, index=['TIR', 'VPL', 'Payback'])
 
 # Cálculo dos valores
-vpl_a = round(np.npv(df_tma.iat[0, 0], df['A']), 2)
-tir_a = np.irr(df['A'])
+vpl_a = round(npf.npv(df_tma.iat[0, 0], df['A']), 2)
+tir_a = npf.irr(df['A'])
 payback_a = round(discounted_payback_period(df_tma.iat[0, 0], df['A']), 2)
 
-vpl_b = round(np.npv(df_tma.iat[0, 0], df['B']), 2)
-tir_b = np.irr(df['B'])
+vpl_b = round(npf.npv(df_tma.iat[0, 0], df['B']), 2)
+tir_b = npf.irr(df['B'])
 payback_b = round(discounted_payback_period(df_tma.iat[0, 0], df['B']), 2)
 
 # Exibição dos gráficos e resultados
