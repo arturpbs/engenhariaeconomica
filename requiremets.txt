@@ -1,4 +1,4 @@
 streamlit
 pandas
 numpy==2.0.1
-git+https://github.com/numpy/numpy-financial.git
+numpy-financial==1.0.0
